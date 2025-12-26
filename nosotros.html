@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Legales | Víctor Céspedes & Asociados</title>
+    <title>Sobre Nosotros | Víctor Céspedes & Asociados</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset y estilos base */
@@ -157,8 +157,8 @@
             z-index: 1001;
         }
         
-        /* Hero section servicios */
-        .hero-services {
+        /* Hero section nosotros */
+        .hero-nosotros {
             background-color: #f8f8f8;
             padding: 160px 0 80px;
             margin-top: 80px;
@@ -167,7 +167,7 @@
             text-align: center;
         }
         
-        .hero-services::before {
+        .hero-nosotros::before {
             content: '';
             position: absolute;
             top: 0;
@@ -177,12 +177,12 @@
             background-color: #000000;
         }
         
-        .hero-services-content {
+        .hero-nosotros-content {
             max-width: 800px;
             margin: 0 auto;
         }
         
-        .hero-services h1 {
+        .hero-nosotros h1 {
             font-size: 48px;
             color: #000000;
             margin-bottom: 25px;
@@ -190,7 +190,7 @@
             line-height: 1.2;
         }
         
-        .hero-services p {
+        .hero-nosotros p {
             font-size: 18px;
             color: #666666;
             margin-bottom: 40px;
@@ -223,158 +223,151 @@
             background-color: #000000;
         }
         
-        /* Servicios principales */
-        .services-main {
+        /* Historia */
+        .historia-content {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .historia-text h3 {
+            font-size: 28px;
+            color: #000000;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .historia-text p {
+            margin-bottom: 20px;
+            color: #666666;
+            line-height: 1.8;
+        }
+        
+        .historia-image {
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .historia-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .historia-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Valores */
+        .valores-section {
+            background-color: #f8f8f8;
+        }
+        
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
             margin-top: 40px;
         }
         
-        .service-main-card {
-            background-color: #f8f8f8;
-            padding: 40px 35px;
+        .valor-card {
+            text-align: center;
+            padding: 40px 30px;
             transition: all 0.3s;
             border: 1px solid #eeeeee;
-            position: relative;
-            overflow: hidden;
+            background-color: #ffffff;
         }
         
-        .service-main-card:hover {
+        .valor-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         }
         
-        .service-icon-large {
+        .valor-icon {
             font-size: 50px;
             color: #000000;
-            margin-bottom: 30px;
-            display: inline-block;
-        }
-        
-        .service-main-card h3 {
-            font-size: 24px;
-            color: #000000;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .service-main-card p {
-            color: #666666;
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
-        
-        .service-features {
-            list-style: none;
-            margin-top: 20px;
-        }
-        
-        .service-features li {
-            color: #666666;
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.6;
-        }
-        
-        .service-features li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #000000;
-            font-weight: bold;
-        }
-        
-        /* Servicios especializados */
-        .services-specialized {
-            background-color: #f8f8f8;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .service-card {
-            background-color: #ffffff;
-            padding: 35px 30px;
-            transition: all 0.3s;
-            border: 1px solid #eeeeee;
-            text-align: center;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        .service-icon {
-            font-size: 40px;
-            color: #000000;
             margin-bottom: 25px;
             display: inline-block;
         }
         
-        .service-card h3 {
+        .valor-card h3 {
             font-size: 22px;
             color: #000000;
             margin-bottom: 15px;
             font-weight: 700;
         }
         
-        .service-card p {
+        .valor-card p {
             color: #666666;
             line-height: 1.7;
         }
         
-        /* Proceso de trabajo */
-        .process-steps {
+        /* Estadísticas */
+        .stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-            counter-reset: step-counter;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
         
-        .process-step {
+        .stat-item {
             text-align: center;
-            position: relative;
             padding: 30px 20px;
+            border: 1px solid #eeeeee;
+            transition: all 0.3s;
         }
         
-        .process-step:before {
-            counter-increment: step-counter;
-            content: counter(step-counter);
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background-color: #000000;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            z-index: 1;
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
         }
         
-        .process-step h4 {
-            font-size: 20px;
+        .stat-number {
+            font-size: 48px;
             color: #000000;
-            margin-bottom: 15px;
             font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1;
         }
         
-        .process-step p {
+        .stat-label {
             color: #666666;
-            line-height: 1.7;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Filosofía */
+        .filosofia-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .filosofia-text {
+            background-color: #f8f8f8;
+            padding: 50px;
+            margin-top: 40px;
+            position: relative;
+            border-left: 5px solid #000000;
+        }
+        
+        .filosofia-text p {
+            font-size: 20px;
+            color: #333333;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .filosofia-author {
+            text-align: right;
+            font-weight: 700;
+            color: #000000;
+            font-size: 18px;
         }
         
         /* CTA Section */
@@ -494,12 +487,12 @@
         
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .hero-services h1 {
+            .hero-nosotros h1 {
                 font-size: 42px;
             }
             
-            .services-main {
-                grid-template-columns: 1fr;
+            .historia-content {
+                gap: 40px;
             }
             
             .main-nav ul {
@@ -572,7 +565,7 @@
                 display: none;
             }
             
-            .hero-services {
+            .hero-nosotros {
                 padding: 140px 0 60px;
             }
             
@@ -580,14 +573,18 @@
                 padding: 80px 0;
             }
             
-            .process-steps {
+            .historia-content {
                 grid-template-columns: 1fr;
-                gap: 60px;
+            }
+            
+            .historia-image {
+                height: 350px;
+                order: -1;
             }
         }
         
         @media (max-width: 768px) {
-            .hero-services h1 {
+            .hero-nosotros h1 {
                 font-size: 36px;
             }
             
@@ -609,22 +606,26 @@
                 font-size: 20px;
             }
             
-            .hero-services {
+            .hero-nosotros {
                 margin-top: 70px;
             }
             
-            .service-main-card,
-            .service-card {
+            .valor-card,
+            .filosofia-text {
                 padding: 30px 25px;
+            }
+            
+            .stat-number {
+                font-size: 40px;
             }
         }
         
         @media (max-width: 576px) {
-            .hero-services h1 {
+            .hero-nosotros h1 {
                 font-size: 32px;
             }
             
-            .hero-services p {
+            .hero-nosotros p {
                 font-size: 16px;
             }
             
@@ -644,10 +645,18 @@
             .container {
                 padding: 0 15px;
             }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .historia-image {
+                height: 300px;
+            }
         }
         
         @media (max-width: 400px) {
-            .hero-services h1 {
+            .hero-nosotros h1 {
                 font-size: 28px;
             }
             
@@ -662,6 +671,10 @@
             
             .section {
                 padding: 60px 0;
+            }
+            
+            .filosofia-text {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -682,8 +695,8 @@
                 <nav class="main-nav" id="mainNav">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html" class="active">Servicios</a></li>
-                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="nosotros.html" class="active">Sobre Nosotros</a></li>
                         <li><a href="equipo.html">Equipo</a></li>
                         <li><a href="exitos.html">Casos de Éxito</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
@@ -702,148 +715,103 @@
         <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
-    <!-- Hero Section Servicios -->
-    <section class="hero-services">
+    <!-- Hero Section Nosotros -->
+    <section class="hero-nosotros">
         <div class="container">
-            <div class="hero-services-content">
-                <h1>Servicios Legales Especializados</h1>
-                <p>Con más de 32 años de experiencia, ofrecemos una amplia gama de servicios legales diseñados para proteger sus intereses y brindar soluciones efectivas a sus necesidades jurídicas.</p>
+            <div class="hero-nosotros-content">
+                <h1>32 Años de Excelencia Legal</h1>
+                <p>Desde 1991, el Dr. Víctor Céspedes ha liderado una de las firmas legales más prestigiosas de República Dominicana, combinando experiencia, integridad y compromiso con nuestros clientes.</p>
             </div>
         </div>
     </section>
 
-    <!-- Servicios Principales -->
+    <!-- Historia -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Áreas de Práctica Principal</h2>
-            <div class="services-main">
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Derecho Corporativo y Comercial</h3>
-                    <p>Asesoría integral para empresas en todas las etapas de su ciclo de vida, desde la constitución hasta operaciones complejas.</p>
-                    <ul class="service-features">
-                        <li>Constitución de empresas y sociedades</li>
-                        <li>Contratos comerciales y corporativos</li>
-                        <li>Fusiones y adquisiciones</li>
-                        <li>Gobierno corporativo y compliance</li>
-                        <li>Asesoría en inversiones extranjeras</li>
-                    </ul>
+            <h2 class="section-title">Nuestra Historia</h2>
+            <div class="historia-content">
+                <div class="historia-text">
+                    <h3>Fundado en 1991 por el Dr. Víctor Céspedes</h3>
+                    <p>Víctor Céspedes & Asociados fue fundado en 1991 por el destacado jurista Dr. Víctor Céspedes, quien visionó un bufete que combinara el rigor jurídico con un servicio personalizado y cercano al cliente.</p>
+                    <p>Desde sus modestos inicios en un pequeño despacho en Santo Domingo, la firma ha crecido para convertirse en una de las más respetadas en el ámbito legal dominicano, manteniendo siempre los valores fundamentales de excelencia, ética y compromiso.</p>
+                    <p>A lo largo de más de tres décadas, hemos evolucionado para adaptarnos a los cambios en el panorama legal, incorporando nuevas especialidades y expandiendo nuestro equipo de abogados altamente capacitados.</p>
+                    <p>Nuestra trayectoria está marcada por casos emblemáticos que han contribuido al desarrollo del derecho en República Dominicana y por relaciones duraderas con clientes que confían en nuestro criterio y dedicación.</p>
                 </div>
-                
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3>Litigios y Arbitraje</h3>
-                    <p>Representación especializada en procedimientos judiciales y arbitrales, tanto a nivel nacional como internacional.</p>
-                    <ul class="service-features">
-                        <li>Litigios civiles y comerciales</li>
-                        <li>Arbitraje nacional e internacional</li>
-                        <li>Procedimientos ante tribunales</li>
-                        <li>Mediación y resolución alternativa</li>
-                        <li>Ejecución de sentencias</li>
-                    </ul>
-                </div>
-                
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Derecho Inmobiliario</h3>
-                    <p>Asesoría completa en transacciones inmobiliarias, desarrollo de proyectos y litigios de propiedad.</p>
-                    <ul class="service-features">
-                        <li>Compraventa de propiedades</li>
-                        <li>Due diligence inmobiliario</li>
-                        <li>Contratos de arrendamiento</li>
-                        <li>Desarrollo de proyectos</li>
-                        <li>Litigios de propiedad y posesión</li>
-                    </ul>
+                <div class="historia-image">
+                    <img src="imagenes inicio/imagen-representativa.jpeg" alt="Historia de Víctor Céspedes & Asociados" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\'background-color: #e0e0e0; height: 100%; display: flex; align-items: center; justify-content: center; color: #999999; font-size: 24px;\'>Historia del Bufete</div>';">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Servicios Especializados -->
-    <section class="section services-specialized">
+    <!-- Valores -->
+    <section class="section valores-section">
         <div class="container">
-            <h2 class="section-title">Servicios Especializados</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Derecho de Familia</h3>
-                    <p>Divorcios, custodia, pensión alimenticia, adopciones y todos los asuntos relacionados con la familia.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h3>Propiedad Intelectual</h3>
-                    <p>Registro y protección de marcas, patentes, derechos de autor y secretos comerciales.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3>Derecho Laboral</h3>
-                    <p>Contratos de trabajo, despidos, negociaciones colectivas y defensa en procesos laborales.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
+            <h2 class="section-title">Nuestros Valores</h2>
+            <div class="valores-grid">
+                <div class="valor-card">
+                    <div class="valor-icon">
                         <i class="fas fa-balance-scale"></i>
                     </div>
-                    <h3>Derecho Administrativo</h3>
-                    <p>Representación ante organismos gubernamentales y procedimientos administrativos.</p>
+                    <h3>Excelencia Profesional</h3>
+                    <p>Mantenemos los más altos estándares de calidad en todos nuestros servicios, con un equipo constantemente actualizado en los desarrollos legales más recientes.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="valor-card">
+                    <div class="valor-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3>Derecho Contractual</h3>
-                    <p>Redacción, revisión y negociación de todo tipo de contratos y acuerdos.</p>
+                    <h3>Integridad y Ética</h3>
+                    <p>Operamos con absoluta transparencia y honestidad, guiando cada decisión por principios éticos sólidos y un profundo respeto por la ley.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                <div class="valor-card">
+                    <div class="valor-icon">
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Asesoría Financiera</h3>
-                    <p>Cumplimiento regulatorio, operaciones financieras y asesoría en mercados de capital.</p>
+                    <h3>Compromiso con el Cliente</h3>
+                    <p>Cada cliente recibe atención personalizada y dedicada, con soluciones legales adaptadas a sus necesidades específicas y objetivos particulares.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Proceso de Trabajo -->
+    <!-- Estadísticas -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <h4>Consulta Inicial</h4>
-                    <p>Evaluamos su situación jurídica y definimos los objetivos a alcanzar en una reunión confidencial.</p>
+            <h2 class="section-title">Nuestra Trayectoria en Números</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">32+</div>
+                    <div class="stat-label">Años de Experiencia</div>
                 </div>
                 
-                <div class="process-step">
-                    <h4>Análisis Estratégico</h4>
-                    <p>Estudiamos minuciosamente su caso y desarrollamos la estrategia legal más adecuada.</p>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Casos Exitosos</div>
                 </div>
                 
-                <div class="process-step">
-                    <h4>Ejecución Personalizada</h4>
-                    <p>Implementamos la estrategia con un equipo especializado, manteniéndole informado en cada etapa.</p>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Abogados Especializados</div>
                 </div>
                 
-                <div class="process-step">
-                    <h4>Seguimiento Continuo</h4>
-                    <p>Proporcionamos asesoría constante y evaluamos resultados para garantizar el éxito de su caso.</p>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofía -->
+    <section class="section valores-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Filosofía</h2>
+            <div class="filosofia-content">
+                <div class="filosofia-text">
+                    <p>"Creemos que el derecho no es solo una profesión, sino una vocación de servicio. Cada caso representa no solo un desafío legal, sino una oportunidad para hacer justicia y contribuir positivamente a nuestra sociedad."</p>
+                    <div class="filosofia-author">— Dr. Víctor Céspedes, Fundador</div>
                 </div>
             </div>
         </div>
@@ -853,8 +821,8 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>¿Necesita Asesoría Legal Especializada?</h2>
-                <p>Nuestro equipo de abogados está listo para analizar su caso y ofrecerle la mejor solución legal. Contáctenos para una consulta inicial.</p>
+                <h2>¿Listo para trabajar con nosotros?</h2>
+                <p>Nuestra experiencia de más de tres décadas está a su disposición. Contáctenos para conocer cómo podemos ayudarle con sus necesidades legales.</p>
                 <a href="contacto.html" class="btn-white">
                     <i class="fas fa-calendar-check"></i> Solicitar Consulta
                 </a>
@@ -968,11 +936,11 @@
             }
         });
         
-        // Si estamos en servicios.html, marcar "Servicios" como activo
-        if (currentPage === 'servicios.html') {
-            const serviciosLink = document.querySelector('a[href="servicios.html"]');
-            if (serviciosLink) {
-                serviciosLink.classList.add('active');
+        // Si estamos en nosotros.html, marcar "Sobre Nosotros" como activo
+        if (currentPage === 'nosotros.html') {
+            const nosotrosLink = document.querySelector('a[href="nosotros.html"]');
+            if (nosotrosLink) {
+                nosotrosLink.classList.add('active');
             }
         }
     </script>

@@ -322,6 +322,24 @@
             letter-spacing: 1px;
         }
         
+        /* Imagen del bufete */
+        .about-image {
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
         /* Footer */
         .footer {
             background-color: #000000;
@@ -479,6 +497,11 @@
                 grid-template-columns: 1fr;
             }
             
+            .about-image {
+                height: 350px;
+                order: -1;
+            }
+            
             .hero-btns {
                 flex-direction: column;
                 align-items: center;
@@ -549,6 +572,10 @@
             .container {
                 padding: 0 15px;
             }
+            
+            .about-image {
+                height: 300px;
+            }
         }
         
         @media (max-width: 400px) {
@@ -612,7 +639,7 @@
     <section class="hero" id="inicio">
         <div class="container">
             <div class="hero-content">
-                <h1>Excelencia Legal con 27 Años de Experiencia</h1>
+                <h1>Excelencia Legal con 32 Años de Experiencia</h1>
                 <p>En Víctor Céspedes & Asociados brindamos asesoría legal integral y representación de calidad en todas las áreas del derecho dominicano. Nuestro compromiso es defender con pasión los intereses de nuestros clientes.</p>
                 <div class="hero-btns">
                     <a href="contacto.html" class="btn-primary">
@@ -632,14 +659,14 @@
             <h2 class="section-title">Víctor Céspedes & Asociados</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>27 Años de Experiencia Legal</h3>
-                    <p>Fundado en 1996 por el destacado jurista Víctor Céspedes, nuestro bufete se ha consolidado como una de las firmas legales de mayor prestigio en República Dominicana.</p>
+                    <h3>Fundado en 1991 por el Dr. Víctor Céspedes</h3>
+                    <p>Fundado en 1991 por el destacado jurista Dr. Víctor Céspedes, nuestro bufete se ha consolidado como una de las firmas legales de mayor prestigio en República Dominicana, con más de 32 años de trayectoria profesional.</p>
                     <p>Con sede en Santo Domingo y una red de colaboradores en las principales ciudades del país, ofrecemos servicios jurídicos especializados tanto para clientes nacionales como internacionales.</p>
                     <p>Nuestro enfoque combina experiencia práctica con conocimiento teórico profundo. Cada caso es tratado con la máxima atención, analizando todas las variables para desarrollar la estrategia legal más adecuada.</p>
                     
                     <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-number">27</div>
+                            <div class="stat-number">32</div>
                             <div class="stat-label">Años de Experiencia</div>
                         </div>
                         <div class="stat-item">
@@ -659,9 +686,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div style="background-color: #e0e0e0; height: 400px; display: flex; align-items: center; justify-content: center; color: #999999; font-size: 24px;">
-                        Imagen del Bufete
-                    </div>
+                    <img src="imagenes inicio/imagen-representativa.jpeg" alt="Víctor Céspedes & Asociados - Bufete de Abogados" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\'background-color: #e0e0e0; height: 100%; display: flex; align-items: center; justify-content: center; color: #999999; font-size: 24px;\'>Imagen del Bufete</div>';">
                 </div>
             </div>
         </div>
@@ -673,7 +698,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Víctor Céspedes & Asociados</h3>
-                    <p>Bufete de abogados con 27 años de experiencia en República Dominicana, ofreciendo servicios legales integrales y especializados.</p>
+                    <p>Bufete de abogados fundado en 1991 por el Dr. Víctor Céspedes, con 32 años de experiencia en República Dominicana, ofreciendo servicios legales integrales y especializados.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -694,13 +719,13 @@
                     <h3>Información</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Santo Domingo, República Dominicana</p>
                     <p><i class="far fa-clock"></i> Lun-Vie: 10:00 AM - 3:00 PM</p>
-                    <p>Especialistas en derecho corporativo, inmobiliario, familiar y más.</p>
+                    <p>Fundado en 1991 · Más de tres décadas de excelencia legal</p>
                 </div>
             </div>
             
             <div class="copyright">
                 <p>&copy; 2023 Víctor Céspedes & Asociados. Todos los derechos reservados.</p>
-                <p>Bufete de Abogados registrado en República Dominicana.</p>
+                <p>Bufete de Abogados registrado en República Dominicana. Fundado en 1991.</p>
             </div>
         </div>
     </footer>
@@ -775,7 +800,10 @@
         
         // Si estamos en index.html, marcar "Inicio" como activo
         if (currentPage === 'index.html' || currentPage === '') {
-            document.querySelector('a[href="index.html"]').classList.add('active');
+            const inicioLink = document.querySelector('a[href="index.html"]');
+            if (inicioLink) {
+                inicioLink.classList.add('active');
+            }
         }
     </script>
 </body>

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Legales | Víctor Céspedes & Asociados</title>
+    <title>Contacto | Víctor Céspedes & Asociados</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Reset y estilos base */
         * {
@@ -157,8 +158,8 @@
             z-index: 1001;
         }
         
-        /* Hero section servicios */
-        .hero-services {
+        /* Hero section contacto */
+        .hero-contacto {
             background-color: #f8f8f8;
             padding: 160px 0 80px;
             margin-top: 80px;
@@ -167,7 +168,7 @@
             text-align: center;
         }
         
-        .hero-services::before {
+        .hero-contacto::before {
             content: '';
             position: absolute;
             top: 0;
@@ -177,12 +178,12 @@
             background-color: #000000;
         }
         
-        .hero-services-content {
+        .hero-contacto-content {
             max-width: 800px;
             margin: 0 auto;
         }
         
-        .hero-services h1 {
+        .hero-contacto h1 {
             font-size: 48px;
             color: #000000;
             margin-bottom: 25px;
@@ -190,7 +191,7 @@
             line-height: 1.2;
         }
         
-        .hero-services p {
+        .hero-contacto p {
             font-size: 18px;
             color: #666666;
             margin-bottom: 40px;
@@ -223,158 +224,214 @@
             background-color: #000000;
         }
         
-        /* Servicios principales */
-        .services-main {
+        /* Contenido de contacto */
+        .contacto-content {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
             margin-top: 40px;
         }
         
-        .service-main-card {
+        /* Información de contacto */
+        .contacto-info {
             background-color: #f8f8f8;
-            padding: 40px 35px;
-            transition: all 0.3s;
-            border: 1px solid #eeeeee;
-            position: relative;
-            overflow: hidden;
+            padding: 40px;
+            border-radius: 5px;
         }
         
-        .service-main-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-        }
-        
-        .service-icon-large {
-            font-size: 50px;
+        .contacto-info h3 {
+            font-size: 28px;
             color: #000000;
             margin-bottom: 30px;
-            display: inline-block;
-        }
-        
-        .service-main-card h3 {
-            font-size: 24px;
-            color: #000000;
-            margin-bottom: 20px;
             font-weight: 700;
         }
         
-        .service-main-card p {
-            color: #666666;
-            line-height: 1.7;
-            margin-bottom: 25px;
+        .contacto-details {
+            margin-bottom: 40px;
         }
         
-        .service-features {
-            list-style: none;
-            margin-top: 20px;
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
         }
         
-        .service-features li {
+        .contact-icon {
+            font-size: 24px;
+            color: #000000;
+            margin-right: 20px;
+            width: 30px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            font-size: 18px;
+            color: #000000;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .contact-text p {
             color: #666666;
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
             line-height: 1.6;
         }
         
-        .service-features li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #000000;
-            font-weight: bold;
-        }
-        
-        /* Servicios especializados */
-        .services-specialized {
-            background-color: #f8f8f8;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+        /* Números de teléfono */
+        .telefonos-container {
             margin-top: 40px;
         }
         
-        .service-card {
-            background-color: #ffffff;
-            padding: 35px 30px;
-            transition: all 0.3s;
-            border: 1px solid #eeeeee;
-            text-align: center;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        .service-icon {
-            font-size: 40px;
-            color: #000000;
-            margin-bottom: 25px;
-            display: inline-block;
-        }
-        
-        .service-card h3 {
-            font-size: 22px;
-            color: #000000;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .service-card p {
-            color: #666666;
-            line-height: 1.7;
-        }
-        
-        /* Proceso de trabajo */
-        .process-steps {
+        .telefonos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-            counter-reset: step-counter;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
         }
         
-        .process-step {
-            text-align: center;
-            position: relative;
-            padding: 30px 20px;
+        .telefono-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #eeeeee;
+            transition: all 0.3s;
         }
         
-        .process-step:before {
-            counter-increment: step-counter;
-            content: counter(step-counter);
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background-color: #000000;
+        .telefono-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .telefono-numero {
+            font-size: 18px;
+            color: #000000;
+            font-weight: 600;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
             color: white;
-            border-radius: 50%;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            z-index: 1;
+            gap: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
         }
         
-        .process-step h4 {
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .whatsapp-icon {
+            font-size: 20px;
+        }
+        
+        /* Mapa */
+        .mapa-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+        
+        .mapa-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        .mapa-overlay {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+        
+        .mapa-btn {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .mapa-btn:hover {
+            background-color: #333333;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Horario */
+        .horario-info {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 5px;
+            border-left: 4px solid #000000;
+        }
+        
+        .horario-info h4 {
             font-size: 20px;
             color: #000000;
             margin-bottom: 15px;
             font-weight: 700;
         }
         
-        .process-step p {
+        .horario-info p {
             color: #666666;
-            line-height: 1.7;
+            line-height: 1.8;
+        }
+        
+        /* Redes sociales */
+        .redes-sociales {
+            margin-top: 40px;
+        }
+        
+        .redes-sociales h4 {
+            font-size: 20px;
+            color: #000000;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .redes-icons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .redes-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0;
+            color: #333333;
+            border-radius: 50%;
+            font-size: 22px;
+            transition: all 0.3s;
+        }
+        
+        .redes-icons a:hover {
+            background-color: #000000;
+            color: white;
+            transform: translateY(-3px);
         }
         
         /* CTA Section */
@@ -383,6 +440,7 @@
             color: white;
             padding: 80px 0;
             text-align: center;
+            margin-top: 80px;
         }
         
         .cta-content {
@@ -494,16 +552,20 @@
         
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .hero-services h1 {
+            .hero-contacto h1 {
                 font-size: 42px;
             }
             
-            .services-main {
-                grid-template-columns: 1fr;
+            .contacto-content {
+                gap: 40px;
             }
             
             .main-nav ul {
                 gap: 20px;
+            }
+            
+            .mapa-container {
+                height: 450px;
             }
         }
         
@@ -572,7 +634,7 @@
                 display: none;
             }
             
-            .hero-services {
+            .hero-contacto {
                 padding: 140px 0 60px;
             }
             
@@ -580,14 +642,18 @@
                 padding: 80px 0;
             }
             
-            .process-steps {
+            .contacto-content {
                 grid-template-columns: 1fr;
-                gap: 60px;
+            }
+            
+            .mapa-container {
+                height: 400px;
+                order: -1;
             }
         }
         
         @media (max-width: 768px) {
-            .hero-services h1 {
+            .hero-contacto h1 {
                 font-size: 36px;
             }
             
@@ -609,22 +675,31 @@
                 font-size: 20px;
             }
             
-            .hero-services {
+            .hero-contacto {
                 margin-top: 70px;
             }
             
-            .service-main-card,
-            .service-card {
-                padding: 30px 25px;
+            .contacto-info {
+                padding: 30px;
+            }
+            
+            .telefono-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .whatsapp-btn {
+                align-self: flex-start;
             }
         }
         
         @media (max-width: 576px) {
-            .hero-services h1 {
+            .hero-contacto h1 {
                 font-size: 32px;
             }
             
-            .hero-services p {
+            .hero-contacto p {
                 font-size: 16px;
             }
             
@@ -644,10 +719,19 @@
             .container {
                 padding: 0 15px;
             }
+            
+            .mapa-container {
+                height: 350px;
+            }
+            
+            .mapa-btn {
+                padding: 10px 18px;
+                font-size: 14px;
+            }
         }
         
         @media (max-width: 400px) {
-            .hero-services h1 {
+            .hero-contacto h1 {
                 font-size: 28px;
             }
             
@@ -662,6 +746,15 @@
             
             .section {
                 padding: 60px 0;
+            }
+            
+            .telefono-numero {
+                font-size: 16px;
+            }
+            
+            .whatsapp-btn {
+                padding: 8px 12px;
+                font-size: 14px;
             }
         }
     </style>
@@ -682,15 +775,15 @@
                 <nav class="main-nav" id="mainNav">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html" class="active">Servicios</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
                         <li><a href="nosotros.html">Sobre Nosotros</a></li>
                         <li><a href="equipo.html">Equipo</a></li>
                         <li><a href="exitos.html">Casos de Éxito</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="contacto.html" class="active">Contacto</a></li>
                     </ul>
                 </nav>
                 
-                <button class="contact-btn" onclick="window.location.href='contacto.html'">
+                <button class="contact-btn">
                     <i class="fas fa-gavel"></i> Consulta
                 </button>
                 
@@ -702,148 +795,134 @@
         <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
-    <!-- Hero Section Servicios -->
-    <section class="hero-services">
+    <!-- Hero Section Contacto -->
+    <section class="hero-contacto">
         <div class="container">
-            <div class="hero-services-content">
-                <h1>Servicios Legales Especializados</h1>
-                <p>Con más de 32 años de experiencia, ofrecemos una amplia gama de servicios legales diseñados para proteger sus intereses y brindar soluciones efectivas a sus necesidades jurídicas.</p>
+            <div class="hero-contacto-content">
+                <h1>Contáctenos</h1>
+                <p>Estamos aquí para atender sus consultas legales. Nuestro equipo de abogados está listo para brindarle la asesoría especializada que necesita.</p>
             </div>
         </div>
     </section>
 
-    <!-- Servicios Principales -->
+    <!-- Sección de Contacto -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Áreas de Práctica Principal</h2>
-            <div class="services-main">
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-briefcase"></i>
+            <h2 class="section-title">Información de Contacto</h2>
+            
+            <div class="contacto-content">
+                <!-- Información de Contacto -->
+                <div class="contacto-info">
+                    <h3>Nuestros Datos de Contacto</h3>
+                    
+                    <div class="contacto-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Dirección</h4>
+                                <p>Av. 27 de Febrero #245, Suite 401<br>Santo Domingo, República Dominicana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Correo Electrónico</h4>
+                                <p>contacto@victorcespedesasociados.com</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Derecho Corporativo y Comercial</h3>
-                    <p>Asesoría integral para empresas en todas las etapas de su ciclo de vida, desde la constitución hasta operaciones complejas.</p>
-                    <ul class="service-features">
-                        <li>Constitución de empresas y sociedades</li>
-                        <li>Contratos comerciales y corporativos</li>
-                        <li>Fusiones y adquisiciones</li>
-                        <li>Gobierno corporativo y compliance</li>
-                        <li>Asesoría en inversiones extranjeras</li>
-                    </ul>
-                </div>
-                
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-gavel"></i>
+                    
+                    <!-- Números de Teléfono -->
+                    <div class="telefonos-container">
+                        <h4 style="color: #000000; margin-bottom: 20px; font-size: 20px; font-weight: 700;">Teléfonos de Contacto</h4>
+                        <div class="telefonos-grid">
+                            <div class="telefono-item">
+                                <span class="telefono-numero">(809) 555-7890</span>
+                                <button class="whatsapp-btn" onclick="enviarWhatsApp('8095557890')">
+                                    <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="telefono-item">
+                                <span class="telefono-numero">(809) 555-7891</span>
+                                <button class="whatsapp-btn" onclick="enviarWhatsApp('8095557891')">
+                                    <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="telefono-item">
+                                <span class="telefono-numero">(809) 555-7892</span>
+                                <button class="whatsapp-btn" onclick="enviarWhatsApp('8095557892')">
+                                    <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="telefono-item">
+                                <span class="telefono-numero">(809) 555-7893</span>
+                                <button class="whatsapp-btn" onclick="enviarWhatsApp('8095557893')">
+                                    <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="telefono-item">
+                                <span class="telefono-numero">(809) 555-7894</span>
+                                <button class="whatsapp-btn" onclick="enviarWhatsApp('8095557894')">
+                                    <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="telefono-item">
+                                <span class="telefono-numero">(809) 555-7895</span>
+                                <button class="whatsapp-btn" onclick="enviarWhatsApp('8095557895')">
+                                    <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="telefono-item">
+                                <span class="telefono-numero">(809) 555-7896</span>
+                                <button class="whatsapp-btn" onclick="enviarWhatsApp('8095557896')">
+                                    <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Litigios y Arbitraje</h3>
-                    <p>Representación especializada en procedimientos judiciales y arbitrales, tanto a nivel nacional como internacional.</p>
-                    <ul class="service-features">
-                        <li>Litigios civiles y comerciales</li>
-                        <li>Arbitraje nacional e internacional</li>
-                        <li>Procedimientos ante tribunales</li>
-                        <li>Mediación y resolución alternativa</li>
-                        <li>Ejecución de sentencias</li>
-                    </ul>
-                </div>
-                
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-home"></i>
+                    
+                    <!-- Horario -->
+                    <div class="horario-info">
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 10:00 AM - 3:00 PM<br>Citas con previa coordinación</p>
                     </div>
-                    <h3>Derecho Inmobiliario</h3>
-                    <p>Asesoría completa en transacciones inmobiliarias, desarrollo de proyectos y litigios de propiedad.</p>
-                    <ul class="service-features">
-                        <li>Compraventa de propiedades</li>
-                        <li>Due diligence inmobiliario</li>
-                        <li>Contratos de arrendamiento</li>
-                        <li>Desarrollo de proyectos</li>
-                        <li>Litigios de propiedad y posesión</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios Especializados -->
-    <section class="section services-specialized">
-        <div class="container">
-            <h2 class="section-title">Servicios Especializados</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                    
+                    <!-- Redes Sociales -->
+                    <div class="redes-sociales">
+                        <h4>Síganos en Redes Sociales</h4>
+                        <div class="redes-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                    <h3>Derecho de Familia</h3>
-                    <p>Divorcios, custodia, pensión alimenticia, adopciones y todos los asuntos relacionados con la familia.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
+                <!-- Mapa -->
+                <div class="mapa-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123456789012!2d-69.987654321!3d18.123456789!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA3JzI0LjQiTiA2OcKwNTknMTUuNiJX!5e0!3m2!1ses!2sdo!4v1234567890123!5m2!1ses!2sdo" 
+                        class="mapa-frame" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <div class="mapa-overlay">
+                        <a href="https://maps.app.goo.gl/MigCMXWjgvNt5Adw8" target="_blank" class="mapa-btn">
+                            <i class="fas fa-map-marker-alt"></i> Abrir en Google Maps
+                        </a>
                     </div>
-                    <h3>Propiedad Intelectual</h3>
-                    <p>Registro y protección de marcas, patentes, derechos de autor y secretos comerciales.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3>Derecho Laboral</h3>
-                    <p>Contratos de trabajo, despidos, negociaciones colectivas y defensa en procesos laborales.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Derecho Administrativo</h3>
-                    <p>Representación ante organismos gubernamentales y procedimientos administrativos.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Derecho Contractual</h3>
-                    <p>Redacción, revisión y negociación de todo tipo de contratos y acuerdos.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Asesoría Financiera</h3>
-                    <p>Cumplimiento regulatorio, operaciones financieras y asesoría en mercados de capital.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proceso de Trabajo -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <h4>Consulta Inicial</h4>
-                    <p>Evaluamos su situación jurídica y definimos los objetivos a alcanzar en una reunión confidencial.</p>
-                </div>
-                
-                <div class="process-step">
-                    <h4>Análisis Estratégico</h4>
-                    <p>Estudiamos minuciosamente su caso y desarrollamos la estrategia legal más adecuada.</p>
-                </div>
-                
-                <div class="process-step">
-                    <h4>Ejecución Personalizada</h4>
-                    <p>Implementamos la estrategia con un equipo especializado, manteniéndole informado en cada etapa.</p>
-                </div>
-                
-                <div class="process-step">
-                    <h4>Seguimiento Continuo</h4>
-                    <p>Proporcionamos asesoría constante y evaluamos resultados para garantizar el éxito de su caso.</p>
                 </div>
             </div>
         </div>
@@ -853,10 +932,10 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>¿Necesita Asesoría Legal Especializada?</h2>
-                <p>Nuestro equipo de abogados está listo para analizar su caso y ofrecerle la mejor solución legal. Contáctenos para una consulta inicial.</p>
-                <a href="contacto.html" class="btn-white">
-                    <i class="fas fa-calendar-check"></i> Solicitar Consulta
+                <h2>¿Necesita Asesoría Legal?</h2>
+                <p>No espere para proteger sus derechos. Contáctenos hoy mismo para una consulta inicial y reciba la orientación legal que necesita.</p>
+                <a href="tel:8095557890" class="btn-white">
+                    <i class="fas fa-phone"></i> Llamar Ahora
                 </a>
             </div>
         </div>
@@ -870,8 +949,8 @@
                     <h3>Víctor Céspedes & Asociados</h3>
                     <p>Bufete de abogados fundado en 1991 por el Dr. Víctor Céspedes, con 32 años de experiencia en República Dominicana, ofreciendo servicios legales integrales y especializados.</p>
                     <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -886,10 +965,11 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Información</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Santo Domingo, República Dominicana</p>
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. 27 de Febrero #245, Suite 401, Santo Domingo</p>
+                    <p><i class="fas fa-phone"></i> (809) 555-7890</p>
+                    <p><i class="fas fa-envelope"></i> contacto@victorcespedesasociados.com</p>
                     <p><i class="far fa-clock"></i> Lun-Vie: 10:00 AM - 3:00 PM</p>
-                    <p>Fundado en 1991 · Más de tres décadas de excelencia legal</p>
                 </div>
             </div>
             
@@ -968,13 +1048,43 @@
             }
         });
         
-        // Si estamos en servicios.html, marcar "Servicios" como activo
-        if (currentPage === 'servicios.html') {
-            const serviciosLink = document.querySelector('a[href="servicios.html"]');
-            if (serviciosLink) {
-                serviciosLink.classList.add('active');
+        // Si estamos en contacto.html, marcar "Contacto" como activo
+        if (currentPage === 'contacto.html') {
+            const contactoLink = document.querySelector('a[href="contacto.html"]');
+            if (contactoLink) {
+                contactoLink.classList.add('active');
             }
         }
+        
+        // Función para enviar mensaje de WhatsApp
+        function enviarWhatsApp(numero) {
+            // Eliminar paréntesis, espacios y guiones del número
+            const numeroLimpio = numero.replace(/[^\d]/g, '');
+            
+            // Mensaje predeterminado
+            const mensaje = encodeURIComponent("Hola, me contacto desde el sitio web de Víctor Céspedes & Asociados. Me gustaría solicitar una consulta legal.");
+            
+            // URL de WhatsApp
+            const url = `https://wa.me/1${numeroLimpio}?text=${mensaje}`;
+            
+            // Abrir en nueva pestaña
+            window.open(url, '_blank');
+        }
+        
+        // Inicializar mapa con coordenadas aproximadas de Santo Domingo
+        // Nota: Las coordenadas reales deben ajustarse según la ubicación exacta
+        function inicializarMapa() {
+            // Las coordenadas reales se obtienen del enlace de Google Maps proporcionado
+            // Para este ejemplo, usamos coordenadas aproximadas de Santo Domingo
+            const mapaIframe = document.querySelector('.mapa-frame');
+            
+            // URL de Google Maps con la ubicación proporcionada
+            // Nota: El iframe usa un enlace embed, pero el botón usa el enlace directo proporcionado
+            mapaIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7654321!2d-69.9384756!3d18.4860585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI5JzEwLjAiTiA2OcKwNTYnMTguNSJX!5e0!3m2!1ses!2sdo!4v1234567890123!5m2!1ses!2sdo";
+        }
+        
+        // Inicializar el mapa cuando la página cargue
+        document.addEventListener('DOMContentLoaded', inicializarMapa);
     </script>
 </body>
 </html>

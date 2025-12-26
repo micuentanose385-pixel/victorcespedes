@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Legales | Víctor Céspedes & Asociados</title>
+    <title>Nuestro Equipo | Víctor Céspedes & Asociados</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset y estilos base */
@@ -157,8 +157,8 @@
             z-index: 1001;
         }
         
-        /* Hero section servicios */
-        .hero-services {
+        /* Hero section equipo */
+        .hero-equipo {
             background-color: #f8f8f8;
             padding: 160px 0 80px;
             margin-top: 80px;
@@ -167,7 +167,7 @@
             text-align: center;
         }
         
-        .hero-services::before {
+        .hero-equipo::before {
             content: '';
             position: absolute;
             top: 0;
@@ -177,12 +177,12 @@
             background-color: #000000;
         }
         
-        .hero-services-content {
+        .hero-equipo-content {
             max-width: 800px;
             margin: 0 auto;
         }
         
-        .hero-services h1 {
+        .hero-equipo h1 {
             font-size: 48px;
             color: #000000;
             margin-bottom: 25px;
@@ -190,7 +190,7 @@
             line-height: 1.2;
         }
         
-        .hero-services p {
+        .hero-equipo p {
             font-size: 18px;
             color: #666666;
             margin-bottom: 40px;
@@ -223,158 +223,121 @@
             background-color: #000000;
         }
         
-        /* Servicios principales */
-        .services-main {
+        /* Equipo principal */
+        .equipo-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 40px;
             margin-top: 40px;
         }
         
-        .service-main-card {
-            background-color: #f8f8f8;
-            padding: 40px 35px;
-            transition: all 0.3s;
+        .abogado-card {
+            background-color: #ffffff;
             border: 1px solid #eeeeee;
-            position: relative;
+            transition: all 0.3s ease;
             overflow: hidden;
         }
         
-        .service-main-card:hover {
+        .abogado-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         }
         
-        .service-icon-large {
-            font-size: 50px;
-            color: #000000;
-            margin-bottom: 30px;
-            display: inline-block;
-        }
-        
-        .service-main-card h3 {
-            font-size: 24px;
-            color: #000000;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .service-main-card p {
-            color: #666666;
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
-        
-        .service-features {
-            list-style: none;
-            margin-top: 20px;
-        }
-        
-        .service-features li {
-            color: #666666;
-            margin-bottom: 10px;
-            padding-left: 25px;
+        .abogado-imagen {
+            height: 350px;
+            overflow: hidden;
             position: relative;
-            line-height: 1.6;
-        }
-        
-        .service-features li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #000000;
-            font-weight: bold;
-        }
-        
-        /* Servicios especializados */
-        .services-specialized {
-            background-color: #f8f8f8;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .service-card {
-            background-color: #ffffff;
-            padding: 35px 30px;
-            transition: all 0.3s;
-            border: 1px solid #eeeeee;
-            text-align: center;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        .service-icon {
-            font-size: 40px;
-            color: #000000;
-            margin-bottom: 25px;
-            display: inline-block;
-        }
-        
-        .service-card h3 {
-            font-size: 22px;
-            color: #000000;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .service-card p {
-            color: #666666;
-            line-height: 1.7;
-        }
-        
-        /* Proceso de trabajo */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-            counter-reset: step-counter;
-        }
-        
-        .process-step {
-            text-align: center;
-            position: relative;
-            padding: 30px 20px;
-        }
-        
-        .process-step:before {
-            counter-increment: step-counter;
-            content: counter(step-counter);
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background-color: #000000;
-            color: white;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #f8f8f8;
+        }
+        
+        /* Estilos específicos para la imagen de Victor (723x901) */
+        .abogado-imagen.victor-imagen {
+            background-color: #f0f0f0;
+        }
+        
+        .abogado-imagen.victor-imagen img {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        
+        .abogado-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .abogado-card:hover .abogado-imagen img {
+            transform: scale(1.05);
+        }
+        
+        .abogado-info {
+            padding: 30px;
+        }
+        
+        .abogado-nombre {
             font-size: 24px;
-            font-weight: 700;
-            z-index: 1;
-        }
-        
-        .process-step h4 {
-            font-size: 20px;
             color: #000000;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 700;
         }
         
-        .process-step p {
+        .abogado-cargo {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .abogado-descripcion {
             color: #666666;
             line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .abogado-especialidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .especialidad-tag {
+            background-color: #f0f0f0;
+            color: #333333;
+            padding: 5px 12px;
+            font-size: 12px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Información del equipo */
+        .equipo-info {
+            background-color: #f8f8f8;
+            margin-top: 80px;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .equipo-info h3 {
+            font-size: 28px;
+            color: #000000;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .equipo-info p {
+            font-size: 18px;
+            color: #666666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         /* CTA Section */
@@ -494,12 +457,13 @@
         
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .hero-services h1 {
+            .hero-equipo h1 {
                 font-size: 42px;
             }
             
-            .services-main {
-                grid-template-columns: 1fr;
+            .equipo-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
             }
             
             .main-nav ul {
@@ -572,7 +536,7 @@
                 display: none;
             }
             
-            .hero-services {
+            .hero-equipo {
                 padding: 140px 0 60px;
             }
             
@@ -580,14 +544,14 @@
                 padding: 80px 0;
             }
             
-            .process-steps {
-                grid-template-columns: 1fr;
-                gap: 60px;
+            .equipo-info {
+                padding: 40px 30px;
+                margin-top: 60px;
             }
         }
         
         @media (max-width: 768px) {
-            .hero-services h1 {
+            .hero-equipo h1 {
                 font-size: 36px;
             }
             
@@ -609,22 +573,32 @@
                 font-size: 20px;
             }
             
-            .hero-services {
+            .hero-equipo {
                 margin-top: 70px;
             }
             
-            .service-main-card,
-            .service-card {
-                padding: 30px 25px;
+            .equipo-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .abogado-imagen {
+                height: 350px;
+            }
+            
+            .abogado-imagen.victor-imagen img {
+                width: auto;
+                height: 100%;
+                max-width: 100%;
             }
         }
         
         @media (max-width: 576px) {
-            .hero-services h1 {
+            .hero-equipo h1 {
                 font-size: 32px;
             }
             
-            .hero-services p {
+            .hero-equipo p {
                 font-size: 16px;
             }
             
@@ -644,10 +618,26 @@
             .container {
                 padding: 0 15px;
             }
+            
+            .abogado-info {
+                padding: 25px 20px;
+            }
+            
+            .abogado-imagen {
+                height: 320px;
+            }
+            
+            .abogado-imagen.victor-imagen {
+                height: 350px;
+            }
+            
+            .equipo-info {
+                padding: 30px 20px;
+            }
         }
         
         @media (max-width: 400px) {
-            .hero-services h1 {
+            .hero-equipo h1 {
                 font-size: 28px;
             }
             
@@ -662,6 +652,14 @@
             
             .section {
                 padding: 60px 0;
+            }
+            
+            .abogado-imagen {
+                height: 280px;
+            }
+            
+            .abogado-imagen.victor-imagen {
+                height: 320px;
             }
         }
     </style>
@@ -682,9 +680,9 @@
                 <nav class="main-nav" id="mainNav">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html" class="active">Servicios</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
                         <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="equipo.html" class="active">Equipo</a></li>
                         <li><a href="exitos.html">Casos de Éxito</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
@@ -702,149 +700,113 @@
         <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
-    <!-- Hero Section Servicios -->
-    <section class="hero-services">
+    <!-- Hero Section Equipo -->
+    <section class="hero-equipo">
         <div class="container">
-            <div class="hero-services-content">
-                <h1>Servicios Legales Especializados</h1>
-                <p>Con más de 32 años de experiencia, ofrecemos una amplia gama de servicios legales diseñados para proteger sus intereses y brindar soluciones efectivas a sus necesidades jurídicas.</p>
+            <div class="hero-equipo-content">
+                <h1>Nuestro Equipo de Abogados</h1>
+                <p>Un equipo de profesionales altamente capacitados con amplia experiencia en diversas áreas del derecho, comprometidos con la excelencia y la defensa de los intereses de nuestros clientes.</p>
             </div>
         </div>
     </section>
 
-    <!-- Servicios Principales -->
+    <!-- Equipo de Abogados -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Áreas de Práctica Principal</h2>
-            <div class="services-main">
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-briefcase"></i>
+            <h2 class="section-title">Nuestros Abogados</h2>
+            <div class="equipo-container">
+                
+                <!-- Abogado 1 - Dr. Víctor Céspedes (Fundador) -->
+                <div class="abogado-card">
+                    <div class="abogado-imagen victor-imagen">
+                        <img src="imagen-equipo/cespedes.png" alt="Dr. Víctor Céspedes - Fundador" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=723&q=80'">
                     </div>
-                    <h3>Derecho Corporativo y Comercial</h3>
-                    <p>Asesoría integral para empresas en todas las etapas de su ciclo de vida, desde la constitución hasta operaciones complejas.</p>
-                    <ul class="service-features">
-                        <li>Constitución de empresas y sociedades</li>
-                        <li>Contratos comerciales y corporativos</li>
-                        <li>Fusiones y adquisiciones</li>
-                        <li>Gobierno corporativo y compliance</li>
-                        <li>Asesoría en inversiones extranjeras</li>
-                    </ul>
+                    <div class="abogado-info">
+                        <h3 class="abogado-nombre">Dr. Víctor Céspedes</h3>
+                        <p class="abogado-cargo">Fundador y Socio Principal</p>
+                        <p class="abogado-descripcion">Con más de 32 años de experiencia, el Dr. Céspedes es especialista en derecho corporativo y comercial. Fundó la firma en 1991 y ha liderado casos emblemáticos en República Dominicana. Su enfoque estratégico y conocimiento profundo del derecho lo han posicionado como uno de los juristas más respetados del país.</p>
+                        <div class="abogado-especialidades">
+                            <span class="especialidad-tag">Derecho Corporativo</span>
+                            <span class="especialidad-tag">Fusiones</span>
+                            <span class="especialidad-tag">Contratos</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-gavel"></i>
+                <!-- Abogado 2 - Dra. Claribel de Ayala -->
+                <div class="abogado-card">
+                    <div class="abogado-imagen">
+                        <img src="imagen-equipo/claribel.jpeg" alt="Dra. Claribel de Ayala" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
                     </div>
-                    <h3>Litigios y Arbitraje</h3>
-                    <p>Representación especializada en procedimientos judiciales y arbitrales, tanto a nivel nacional como internacional.</p>
-                    <ul class="service-features">
-                        <li>Litigios civiles y comerciales</li>
-                        <li>Arbitraje nacional e internacional</li>
-                        <li>Procedimientos ante tribunales</li>
-                        <li>Mediación y resolución alternativa</li>
-                        <li>Ejecución de sentencias</li>
-                    </ul>
+                    <div class="abogado-info">
+                        <h3 class="abogado-nombre">Dra. Claribel de Ayala</h3>
+                        <p class="abogado-cargo">Socia - Derecho de Familia</p>
+                        <p class="abogado-descripcion">Con 18 años de experiencia, la Dra. de Ayala es experta en derecho de familia y sucesiones. Su enfoque compasivo pero firme ha ayudado a cientos de familias a resolver conflictos complejos. Es reconocida por su habilidad para mediar en situaciones delicadas y encontrar soluciones que protegen los mejores intereses de sus clientes.</p>
+                        <div class="abogado-especialidades">
+                            <span class="especialidad-tag">Derecho de Familia</span>
+                            <span class="especialidad-tag">Divorcios</span>
+                            <span class="especialidad-tag">Sucesiones</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="service-main-card">
-                    <div class="service-icon-large">
-                        <i class="fas fa-home"></i>
+                <!-- Abogado 3 - Dr. Víctor Céspedes (Litigios) -->
+                <div class="abogado-card">
+                    <div class="abogado-imagen victor-imagen">
+                        <img src="imagen-equipo/victor.png" alt="Dr. Víctor Céspedes - Litigios" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=723&q=80'">
                     </div>
-                    <h3>Derecho Inmobiliario</h3>
-                    <p>Asesoría completa en transacciones inmobiliarias, desarrollo de proyectos y litigios de propiedad.</p>
-                    <ul class="service-features">
-                        <li>Compraventa de propiedades</li>
-                        <li>Due diligence inmobiliario</li>
-                        <li>Contratos de arrendamiento</li>
-                        <li>Desarrollo de proyectos</li>
-                        <li>Litigios de propiedad y posesión</li>
-                    </ul>
+                    <div class="abogado-info">
+                        <h3 class="abogado-nombre">Dr. Víctor Céspedes</h3>
+                        <p class="abogado-cargo">Socio - Litigios Civiles</p>
+                        <p class="abogado-descripcion">Especializado en litigios complejos y arbitraje comercial con 15 años de práctica. El Dr. Céspedes ha representado exitosamente a clientes en juicios de alta complejidad tanto a nivel nacional como internacional. Su aguda capacidad analítica y persuasión en sala lo han convertido en un litigante temido y respetado.</p>
+                        <div class="abogado-especialidades">
+                            <span class="especialidad-tag">Litigios</span>
+                            <span class="especialidad-tag">Arbitraje</span>
+                            <span class="especialidad-tag">Juicios Civiles</span>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Abogado 4 - Dra. Ana García -->
+                <div class="abogado-card">
+                    <div class="abogado-imagen">
+                        <img src="imagen-equipo/abogado4.jpg" alt="Dra. Ana García" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="abogado-info">
+                        <h3 class="abogado-nombre">Dra. Ana García</h3>
+                        <p class="abogado-cargo">Socia - Derecho Inmobiliario</p>
+                        <p class="abogado-descripcion">Con 12 años de experiencia en derecho inmobiliario, la Dra. García maneja transacciones complejas de propiedad y desarrollo de proyectos. Su conocimiento detallado de la regulación inmobiliaria dominicana y su red de contactos en el sector la convierten en la abogada ideal para inversiones y desarrollos inmobiliarios.</p>
+                        <div class="abogado-especialidades">
+                            <span class="especialidad-tag">Propiedad</span>
+                            <span class="especialidad-tag">Inmobiliario</span>
+                            <span class="especialidad-tag">Desarrollo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Abogado 5 - Lic. Roberto Sánchez -->
+                <div class="abogado-card">
+                    <div class="abogado-imagen">
+                        <img src="imagen-equipo/abogado5.jpg" alt="Lic. Roberto Sánchez" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="abogado-info">
+                        <h3 class="abogado-nombre">Lic. Roberto Sánchez</h3>
+                        <p class="abogado-cargo">Socio - Propiedad Intelectual</p>
+                        <p class="abogado-descripcion">Especialista en propiedad intelectual con 10 años de experiencia protegiendo activos intangibles. El Lic. Sánchez ha manejado registros de marcas, patentes y derechos de autor para empresas nacionales e internacionales. Su enfoque estratégico en la protección de la propiedad intelectual ayuda a empresas a salvaguardar sus innovaciones.</p>
+                        <div class="abogado-especialidades">
+                            <span class="especialidad-tag">Marcas</span>
+                            <span class="especialidad-tag">Patentes</span>
+                            <span class="especialidad-tag">Derechos de Autor</span>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-        </div>
-    </section>
-
-    <!-- Servicios Especializados -->
-    <section class="section services-specialized">
-        <div class="container">
-            <h2 class="section-title">Servicios Especializados</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Derecho de Familia</h3>
-                    <p>Divorcios, custodia, pensión alimenticia, adopciones y todos los asuntos relacionados con la familia.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h3>Propiedad Intelectual</h3>
-                    <p>Registro y protección de marcas, patentes, derechos de autor y secretos comerciales.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3>Derecho Laboral</h3>
-                    <p>Contratos de trabajo, despidos, negociaciones colectivas y defensa en procesos laborales.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Derecho Administrativo</h3>
-                    <p>Representación ante organismos gubernamentales y procedimientos administrativos.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Derecho Contractual</h3>
-                    <p>Redacción, revisión y negociación de todo tipo de contratos y acuerdos.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Asesoría Financiera</h3>
-                    <p>Cumplimiento regulatorio, operaciones financieras y asesoría en mercados de capital.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proceso de Trabajo -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <h4>Consulta Inicial</h4>
-                    <p>Evaluamos su situación jurídica y definimos los objetivos a alcanzar en una reunión confidencial.</p>
-                </div>
-                
-                <div class="process-step">
-                    <h4>Análisis Estratégico</h4>
-                    <p>Estudiamos minuciosamente su caso y desarrollamos la estrategia legal más adecuada.</p>
-                </div>
-                
-                <div class="process-step">
-                    <h4>Ejecución Personalizada</h4>
-                    <p>Implementamos la estrategia con un equipo especializado, manteniéndole informado en cada etapa.</p>
-                </div>
-                
-                <div class="process-step">
-                    <h4>Seguimiento Continuo</h4>
-                    <p>Proporcionamos asesoría constante y evaluamos resultados para garantizar el éxito de su caso.</p>
-                </div>
+            
+            <!-- Información adicional del equipo -->
+            <div class="equipo-info">
+                <h3>Un Equipo Cohesionado</h3>
+                <p>Nuestros abogados trabajan de manera colaborativa, combinando sus especialidades para ofrecer soluciones legales integrales. La sinergia entre nuestro equipo permite abordar casos complejos desde múltiples perspectivas, asegurando la estrategia legal más efectiva para cada cliente.</p>
             </div>
         </div>
     </section>
@@ -853,8 +815,8 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>¿Necesita Asesoría Legal Especializada?</h2>
-                <p>Nuestro equipo de abogados está listo para analizar su caso y ofrecerle la mejor solución legal. Contáctenos para una consulta inicial.</p>
+                <h2>¿Necesita la Representación de Nuestro Equipo?</h2>
+                <p>Nuestros abogados están listos para analizar su caso y ofrecerle la mejor estrategia legal. Contáctenos para programar una consulta con el especialista adecuado.</p>
                 <a href="contacto.html" class="btn-white">
                     <i class="fas fa-calendar-check"></i> Solicitar Consulta
                 </a>
@@ -968,11 +930,11 @@
             }
         });
         
-        // Si estamos en servicios.html, marcar "Servicios" como activo
-        if (currentPage === 'servicios.html') {
-            const serviciosLink = document.querySelector('a[href="servicios.html"]');
-            if (serviciosLink) {
-                serviciosLink.classList.add('active');
+        // Si estamos en equipo.html, marcar "Equipo" como activo
+        if (currentPage === 'equipo.html') {
+            const equipoLink = document.querySelector('a[href="equipo.html"]');
+            if (equipoLink) {
+                equipoLink.classList.add('active');
             }
         }
     </script>
