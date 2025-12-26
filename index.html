@@ -47,6 +47,7 @@
         
         .header-scrolled {
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95);
         }
         
         .header-container {
@@ -157,9 +158,13 @@
             z-index: 1001;
         }
         
-        /* Hero section */
+        /* Hero section - MODIFICADO CON IMAGEN DE FONDO */
         .hero {
-            background-color: #f8f8f8;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             padding: 160px 0 100px;
             margin-top: 80px;
             position: relative;
@@ -180,21 +185,25 @@
             max-width: 800px;
             text-align: center;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
             font-size: 48px;
-            color: #000000;
+            color: #ffffff;
             margin-bottom: 25px;
             font-weight: 700;
             line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
         
         .hero p {
             font-size: 18px;
-            color: #666666;
+            color: #f0f0f0;
             margin-bottom: 40px;
             line-height: 1.7;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
         }
         
         .hero-btns {
@@ -223,16 +232,16 @@
         .btn-primary:hover {
             background-color: #333333;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
         .btn-secondary {
             background-color: transparent;
-            color: #000000;
+            color: #ffffff;
             padding: 15px 35px;
             text-decoration: none;
             font-weight: 600;
-            border: 2px solid #000000;
+            border: 2px solid #ffffff;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -243,8 +252,8 @@
         }
         
         .btn-secondary:hover {
-            background-color: #000000;
-            color: white;
+            background-color: #ffffff;
+            color: #000000;
             transform: translateY(-3px);
         }
         
@@ -487,6 +496,7 @@
             
             .hero {
                 padding: 140px 0 80px;
+                background-attachment: scroll;
             }
             
             .section {
@@ -596,6 +606,11 @@
             .section {
                 padding: 60px 0;
             }
+        }
+        
+        /* Opción para imagen local */
+        .hero-local-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('imagenes inicio/fondo-hero.jpg');
         }
     </style>
 </head>
@@ -805,6 +820,20 @@
                 inicioLink.classList.add('active');
             }
         }
+        
+        // Opción para cargar imagen local si existe
+        const heroSection = document.querySelector('.hero');
+        
+        // Verificar si existe imagen local y cargarla
+        const localImagePath = 'imagenes inicio/fondo-hero.jpg';
+        
+        // Crear una imagen para probar si existe
+        const testImage = new Image();
+        testImage.onload = function() {
+            // Si la imagen local existe, reemplazar la de fondo
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('${localImagePath}')`;
+        };
+        testImage.src = localImagePath;
     </script>
 </body>
 </html>
